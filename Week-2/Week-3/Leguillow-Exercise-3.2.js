@@ -54,9 +54,16 @@ DatabaseFactory.prototype.databaseClass = MySql;
 DatabaseFactory.prototype.createDatabase = function(properties) {
     if (properties.databaseType === "Postgres") {
         this.databaseClass = Postgres;
-    } else {
+    } 
+    if (properties.databaseType === 'MySql'){
         this.databaseClass = MySql;
     }
+    if (properties.databaseType === 'Oracle') {
+        this.databaseClass = Oracle;
+    }
+    
+    if (properties.databaseClass = 'Informix')
+        this.databaseClass = Informix;
 
     return new this.databaseClass(properties);
 };

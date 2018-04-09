@@ -52,7 +52,7 @@ var robert = Object.create(person,)
 Robert.getAge();
 
 console.log("The persons's fullname is '%s': robert.fullname); 
-console.log("The person's age is '%s' robert.age)
+console.log("The person's age is '%s' robert.age);
 
 
 
