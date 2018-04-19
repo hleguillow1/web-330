@@ -1,0 +1,71 @@
+<!--
+Title: Exercise 7.2
+ Author: Richard Krasso
+ Date: 4-19-18
+ Modified by: Hector Leguillow-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Assignment 7.4</title>
+
+    <!-- Stylesheet - Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- JavaScript Libraries -->
+    <script src="../knockout-<version>.js"></script>
+</head>
+<body>
+    <div role="main" class="container">
+        <br/><br/>
+    
+        <h2>Exercise 7.4 - Other Bindings</h2>
+        <table class="table table-dark  table-striped table-hover">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Website</th>
+            </tr>
+            </thead>
+            <tbody data-bind="foreach: tutorials">
+            <tr>
+                <td data-bind="textHTML: title"></td>
+                <td data-bind="text: description"></td>
+                <td><a data-bind="attr: { href: Website}" data-bind="style: {color: 'white'}" target="_blank"> Website</a></td>
+            </tr>
+            <tr>
+                <td data-bind="textCSS: title"></td>
+                <td data-bind="text: description"></td>
+                <td><a data-bind="attr: { href: link}" data-bind="style: {color: 'white'}" target="_blank">Website</a></td>
+            </tr>
+            <tr>
+                <td data-bind="textJavaScript: title"></td>
+                <td data-bind="text: description"></td>
+                <td><a data-bind="attr: { href: link}" data-bind="style: {color: 'white'}" target="_blank"> Website</a></td>
+            </tr>
+            </tbody>
+        </table>/
+
+<script>
+
+</script>
+
+ <br/><br/>
+
+ </div>
+ </div>
+ <br />
+ 
+ 
+ <br/>
+</div>
+</script>
+
+</body>
+</html>
