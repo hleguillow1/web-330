@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Exercise 7.3</title>
+
+    <!-- Stylesheet - Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- JavaScript Libraries -->
+    <script src="../knockout-<version>.js"></script>
+</head>
+<body>
+    <div role="main" class="container">
+        <br/><br/>
+        <h2>The "foreach" binding</h2>
+        <table class="table table-dark table-striped table-hover">
+        <thead>
+        <tr>
+        <th>Name</th>
+        <th>Price</th>
+        </tr>
+        </thead>
+        <tbody data-bind="foreach: vegetables">
+        <tr>
+        <td data-bind="text: name"></td>
+        <td data-bind="text: price"></td>
+        </tr>
+        </tbody>
+        </table>
+        <br/>
+       </div>
+
+       <div class="form-group">
+        <label for="txtcucumber">Cucumber:</label>
+        <input type="text" class="form-control alert-warning" data-bind="value: cucumber" id="txtCucumber"/>
+    </div>
+
+    <div class="form-group">
+        <label for="txtLettuce">Lettuce:</label>
+        <input type="text" class="form-control alert-warning" data-bind="value: lettuce" id="txtLettuce"/>
+    </div>
+
+    <div class="form-group">
+        <label for="txtsquash">Squash:</label>
+        <input type="text" class="form-control alert-warning" data-bind="value: squash" id="txtSquash"/>
+    </div>
+
+<script>
+ function GroceryViewModel() {
+        this.vegetables = ko.observableArray([
+        {name: "Cucumber", price: .9},
+        {name: "Lettuce", price: .99},
+        {name: "Squash", price: 1.75},
+        
+        ]);
+       }
+       ko.applyBindings(new GroceryViewModel());
+</script>
+
+
+
+</body>
+</html>
